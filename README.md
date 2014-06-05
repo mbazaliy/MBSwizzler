@@ -1,7 +1,7 @@
 MBSwizzler
 ==========
 
-Simple class for method swizzling in Swift. Check example for more details
+Simple class for method swizzling in Swift. Check example for more details.
 
 Swizzle NSDictionary methods:
 
@@ -15,4 +15,4 @@ Swizzle static methods:
 
 ```MyClass.swizzleStaticMethodSelector("testClassMethod", withSelector: "my_testClassMethod", forClass: MyClass.classForCoder())```
 
-Note: Custom class should inherit from **NSObject**
+Note: Custom class should inherited from **NSObject**
