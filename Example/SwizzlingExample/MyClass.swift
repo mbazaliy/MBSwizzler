@@ -16,15 +16,15 @@ class MyClass: NSObject {
     }
     
     func testWithParameter(anObject: AnyObject!) -> String! {
-        return "Method with parameter\n"
+        return "Method with parameter"
     }
     
     func testMethod() -> String!{
-    return "This is method\n"
+    return "This is method"
     }
     
     class func testClassMethod() -> String!{
-        return "This is class method\n"
+        return "This is class method"
     }
 }
 

@@ -9,23 +9,23 @@
 import UIKit
 
 extension NSDictionary {
-    func myDescription() -> String!{
-        return "Test 1. Hooked description \n" + myDescription();
+    func swizzled_Description() -> String!{
+        return "\nTest 1. Hooked description \n" + swizzled_Description();
     }
 }
 
 extension MyClass {
     func swizzled_testWithParameter(anObject: AnyObject!) -> String!{
         
-        println("Test 2. testWithParameter hooked, argument object = \(anObject)\n")
+        println("\nTest 2. testWithParameter hooked, argument object = \(anObject)")
         
         return swizzled_testWithParameter(anObject);
     }
 }
 
 extension MyClass {
-    class func my_testClassMethod() -> String!{
-        return "Test 3. testClassMethod hooked \n" + my_testClassMethod()
+    class func swizzled_testClassMethod() -> String!{
+        return "\nTest 3. testClassMethod hooked \n" + swizzled_testClassMethod()
     }
 }
 
@@ -40,6 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         self.window!.backgroundColor = UIColor.whiteColor()
         self.window!.makeKeyAndVisible()
+        self.window!.rootViewController = UIViewController(nibName: nil, bundle: nil)
         swizzleNSDictionaryMethods()
         swizzleCustomClassMethods()
         swizzleCustomClassStaticMethods()
@@ -50,7 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func swizzleNSDictionaryMethods() {
         var dict:NSDictionary = ["SomeObject": kSecValueRef]
 
-        NSDictionary.swizzleMethodSelector("description", withSelector: "myDescription", forClass: NSDictionary.classForCoder())
+        NSDictionary.swizzleMethodSelector("description", withSelector: "swizzled_Description", forClass: NSDictionary.classForCoder())
         
         println(dict.description) //Check
     }
@@ -64,7 +65,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func swizzleCustomClassStaticMethods() {
-        MyClass.swizzleStaticMethodSelector("testClassMethod", withSelector: "my_testClassMethod", forClass: MyClass.classForCoder())
+        MyClass.swizzleStaticMethodSelector("testClassMethod", withSelector: "swizzled_testClassMethod", forClass: MyClass.classForCoder())
         println(MyClass.testClassMethod()) //Check
     }
 
