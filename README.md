@@ -5,7 +5,7 @@ Simple class for method swizzling in Swift. Check example for more details.
 
 Swizzle NSDictionary methods:
 
-```NSDictionary.swizzleMethodSelector("description", withSelector: "myDescription", forClass: NSDictionary.classForCoder())```
+```NSDictionary.swizzleMethodSelector("description", withSelector: "swizzled_Description", forClass: NSDictionary.classForCoder())```
 
 Swizzle custom class methods:
 
@@ -13,6 +13,6 @@ Swizzle custom class methods:
 
 Swizzle static methods:
 
-```MyClass.swizzleStaticMethodSelector("testClassMethod", withSelector: "my_testClassMethod", forClass: MyClass.classForCoder())```
+```MyClass.swizzleStaticMethodSelector("testClassMethod", withSelector: "swizzled_testClassMethod", forClass: MyClass.classForCoder())```
 
 Note: Custom class should be inherited from **NSObject**
