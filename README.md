@@ -12,4 +12,4 @@ MyClass.swizzleMethodSelector("testWithParameter:", withSelector: "swizzled_test
 Swizzle static methods:
 MyClass.swizzleStaticMethodSelector("testClassMethod", withSelector: "my_testClassMethod", forClass: MyClass.classForCoder())
 
-Note: Swizzler works for custom class that inherit from NSObject
+Note: Custom class should inherit from NSObject
