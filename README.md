@@ -15,4 +15,4 @@ Swizzle static methods:
 
 ```MyClass.swizzleStaticMethodSelector("testClassMethod", withSelector: "my_testClassMethod", forClass: MyClass.classForCoder())```
 
-Note: Custom class should inherited from **NSObject**
+Note: Custom class should be inherited from **NSObject**
