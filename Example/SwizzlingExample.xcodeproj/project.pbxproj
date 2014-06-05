@@ -1,0 +1,402 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B151271319406DB800CB4446 /* MyClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B151271219406DB800CB4446 /* MyClass.swift */; };
+		B1B4F3BB193FAC2900B6B869 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B4F3BA193FAC2900B6B869 /* AppDelegate.swift */; };
+		B1B4F3BD193FAC2900B6B869 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1B4F3BC193FAC2900B6B869 /* Images.xcassets */; };
+		B1B4F3C9193FAC2900B6B869 /* SwizzlingExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B4F3C8193FAC2900B6B869 /* SwizzlingExampleTests.swift */; };
+		B1DC3C0A19408BD70022B938 /* MBSwizzler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DC3C0919408BD70022B938 /* MBSwizzler.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B1B4F3C3193FAC2900B6B869 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1B4F3AD193FAC2900B6B869 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1B4F3B4193FAC2900B6B869;
+			remoteInfo = SwizzlingExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B151271219406DB800CB4446 /* MyClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyClass.swift; sourceTree = "<group>"; };
+		B1B4F3B5193FAC2900B6B869 /* SwizzlingExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwizzlingExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1B4F3B9193FAC2900B6B869 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1B4F3BA193FAC2900B6B869 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B1B4F3BC193FAC2900B6B869 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B1B4F3C2193FAC2900B6B869 /* SwizzlingExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwizzlingExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1B4F3C7193FAC2900B6B869 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1B4F3C8193FAC2900B6B869 /* SwizzlingExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwizzlingExampleTests.swift; sourceTree = "<group>"; };
+		B1DC3C0919408BD70022B938 /* MBSwizzler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBSwizzler.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B1B4F3B2193FAC2900B6B869 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1B4F3BF193FAC2900B6B869 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B1B4F3AC193FAC2900B6B869 = {
+			isa = PBXGroup;
+			children = (
+				B1B4F3B7193FAC2900B6B869 /* SwizzlingExample */,
+				B1B4F3C5193FAC2900B6B869 /* SwizzlingExampleTests */,
+				B1B4F3B6193FAC2900B6B869 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B1B4F3B6193FAC2900B6B869 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B1B4F3B5193FAC2900B6B869 /* SwizzlingExample.app */,
+				B1B4F3C2193FAC2900B6B869 /* SwizzlingExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B1B4F3B7193FAC2900B6B869 /* SwizzlingExample */ = {
+			isa = PBXGroup;
+			children = (
+				B1B4F3BA193FAC2900B6B869 /* AppDelegate.swift */,
+				B1DC3C0919408BD70022B938 /* MBSwizzler.swift */,
+				B151271219406DB800CB4446 /* MyClass.swift */,
+				B1B4F3BC193FAC2900B6B869 /* Images.xcassets */,
+				B1B4F3B8193FAC2900B6B869 /* Supporting Files */,
+			);
+			path = SwizzlingExample;
+			sourceTree = "<group>";
+		};
+		B1B4F3B8193FAC2900B6B869 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B1B4F3B9193FAC2900B6B869 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B1B4F3C5193FAC2900B6B869 /* SwizzlingExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				B1B4F3C8193FAC2900B6B869 /* SwizzlingExampleTests.swift */,
+				B1B4F3C6193FAC2900B6B869 /* Supporting Files */,
+			);
+			path = SwizzlingExampleTests;
+			sourceTree = "<group>";
+		};
+		B1B4F3C6193FAC2900B6B869 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B1B4F3C7193FAC2900B6B869 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B1B4F3B4193FAC2900B6B869 /* SwizzlingExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1B4F3CC193FAC2900B6B869 /* Build configuration list for PBXNativeTarget "SwizzlingExample" */;
+			buildPhases = (
+				B1B4F3B1193FAC2900B6B869 /* Sources */,
+				B1B4F3B2193FAC2900B6B869 /* Frameworks */,
+				B1B4F3B3193FAC2900B6B869 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwizzlingExample;
+			productName = SwizzlingExample;
+			productReference = B1B4F3B5193FAC2900B6B869 /* SwizzlingExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B1B4F3C1193FAC2900B6B869 /* SwizzlingExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1B4F3CF193FAC2900B6B869 /* Build configuration list for PBXNativeTarget "SwizzlingExampleTests" */;
+			buildPhases = (
+				B1B4F3BE193FAC2900B6B869 /* Sources */,
+				B1B4F3BF193FAC2900B6B869 /* Frameworks */,
+				B1B4F3C0193FAC2900B6B869 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B1B4F3C4193FAC2900B6B869 /* PBXTargetDependency */,
+			);
+			name = SwizzlingExampleTests;
+			productName = SwizzlingExampleTests;
+			productReference = B1B4F3C2193FAC2900B6B869 /* SwizzlingExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B1B4F3AD193FAC2900B6B869 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = Home;
+				TargetAttributes = {
+					B1B4F3B4193FAC2900B6B869 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					B1B4F3C1193FAC2900B6B869 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = B1B4F3B4193FAC2900B6B869;
+					};
+				};
+			};
+			buildConfigurationList = B1B4F3B0193FAC2900B6B869 /* Build configuration list for PBXProject "SwizzlingExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B1B4F3AC193FAC2900B6B869;
+			productRefGroup = B1B4F3B6193FAC2900B6B869 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B1B4F3B4193FAC2900B6B869 /* SwizzlingExample */,
+				B1B4F3C1193FAC2900B6B869 /* SwizzlingExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B1B4F3B3193FAC2900B6B869 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1B4F3BD193FAC2900B6B869 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1B4F3C0193FAC2900B6B869 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B1B4F3B1193FAC2900B6B869 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B151271319406DB800CB4446 /* MyClass.swift in Sources */,
+				B1B4F3BB193FAC2900B6B869 /* AppDelegate.swift in Sources */,
+				B1DC3C0A19408BD70022B938 /* MBSwizzler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1B4F3BE193FAC2900B6B869 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1B4F3C9193FAC2900B6B869 /* SwizzlingExampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B1B4F3C4193FAC2900B6B869 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1B4F3B4193FAC2900B6B869 /* SwizzlingExample */;
+			targetProxy = B1B4F3C3193FAC2900B6B869 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B1B4F3CA193FAC2900B6B869 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B1B4F3CB193FAC2900B6B869 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B1B4F3CD193FAC2900B6B869 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = SwizzlingExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B1B4F3CE193FAC2900B6B869 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = SwizzlingExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B1B4F3D0193FAC2900B6B869 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SwizzlingExample.app/SwizzlingExample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SwizzlingExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		B1B4F3D1193FAC2900B6B869 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SwizzlingExample.app/SwizzlingExample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SwizzlingExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B1B4F3B0193FAC2900B6B869 /* Build configuration list for PBXProject "SwizzlingExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1B4F3CA193FAC2900B6B869 /* Debug */,
+				B1B4F3CB193FAC2900B6B869 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1B4F3CC193FAC2900B6B869 /* Build configuration list for PBXNativeTarget "SwizzlingExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1B4F3CD193FAC2900B6B869 /* Debug */,
+				B1B4F3CE193FAC2900B6B869 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1B4F3CF193FAC2900B6B869 /* Build configuration list for PBXNativeTarget "SwizzlingExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1B4F3D0193FAC2900B6B869 /* Debug */,
+				B1B4F3D1193FAC2900B6B869 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B1B4F3AD193FAC2900B6B869 /* Project object */;
+}
