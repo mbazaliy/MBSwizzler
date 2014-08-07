@@ -49,7 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     
     func swizzleNSDictionaryMethods() {
-        var dict:NSDictionary = ["SomeObject": kSecValueRef]
+        var dict:NSDictionary = ["SomeObject": "some"]
 
         NSDictionary.swizzleMethodSelector("description", withSelector: "swizzled_Description", forClass: NSDictionary.classForCoder())
         
