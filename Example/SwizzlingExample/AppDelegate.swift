@@ -10,6 +10,7 @@ import UIKit
 
 extension NSDictionary {
     func swizzled_Description() -> String!{
+        println("in swizzled_description")
         return "\nTest 1. Hooked description \n" + swizzled_Description();
     }
 }
@@ -29,6 +30,22 @@ extension MyClass {
     }
 }
 
+extension NSString {
+    class func swizzled_defaultCStringEncoding() -> UInt {
+        println("\nTest 4. NSString hooked \n")
+        return UInt(9999)
+    }
+    
+    class func foo() {
+        println("\nReal foo \n")
+    }
+    
+    class func swizzled_foo() {
+        println("\nSwizzled foo \n")
+    }
+}
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
                             
@@ -41,15 +58,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window!.backgroundColor = UIColor.whiteColor()
         self.window!.makeKeyAndVisible()
         self.window!.rootViewController = UIViewController(nibName: nil, bundle: nil)
-        swizzleNSDictionaryMethods()
-        swizzleCustomClassMethods()
-        swizzleCustomClassStaticMethods()
+        //swizzleNSDictionaryMethods()
+        //swizzleCustomClassMethods()
+        //swizzleCustomClassStaticMethods()
+        swizzleNSStringClassStaticMethods()
         return true
     }
 
     
     func swizzleNSDictionaryMethods() {
-        var dict:NSDictionary = ["SomeObject": kSecValueRef]
+        var dict:NSDictionary = ["SomeObject": "some"]
 
         NSDictionary.swizzleMethodSelector("description", withSelector: "swizzled_Description", forClass: NSDictionary.classForCoder())
         
@@ -67,6 +85,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func swizzleCustomClassStaticMethods() {
         MyClass.swizzleStaticMethodSelector("testClassMethod", withSelector: "swizzled_testClassMethod", forClass: MyClass.classForCoder())
         println(MyClass.testClassMethod()) //Check
+    }
+    
+    func swizzleNSStringClassStaticMethods() {
+        NSString.swizzleStaticMethodSelector("defaultCStringEncoding", withSelector: "swizzled_defaultCStringEncoding", forClass: NSString.classForCoder())
+        println(NSString.defaultCStringEncoding())
+        
+        NSString.swizzleStaticMethodSelector("foo", withSelector: "swizzled_foo", forClass: NSString.classForCoder())
+        println(NSString.foo())
+        
     }
 
     func applicationWillResignActive(application: UIApplication) {
