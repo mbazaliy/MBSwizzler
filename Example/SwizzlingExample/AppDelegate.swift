@@ -61,7 +61,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //swizzleNSDictionaryMethods()
         //swizzleCustomClassMethods()
         //swizzleCustomClassStaticMethods()
-        swizzleNSStringClassStaticMethods()
+        //swizzleNSStringClassStaticMethods()
+        swizzleCustomClassMethodsBis()
         return true
     }
 
@@ -72,6 +73,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NSDictionary.swizzleMethodSelector("description", withSelector: "swizzled_Description", forClass: NSDictionary.classForCoder())
         
         println(dict.description) //Check
+    }
+    
+    func swizzleCustomClassMethodsBis() {
+        var custom: MyClassC = MyClassC(title: "Custom")
+        
+        MyClassC.swizzleMethodSelector("testWithParameter:", withSelector: "swizzled_testWithParameter:", forClass: MyClassC.classForCoder())
+        
+        println(custom.testWithParameter("Param1")) //Check
     }
     
     func swizzleCustomClassMethods() {

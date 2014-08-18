@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48CC680D19A235C20004DFE3 /* Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CC680C19A235C20004DFE3 /* Ext.m */; };
 		B151271319406DB800CB4446 /* MyClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B151271219406DB800CB4446 /* MyClass.swift */; };
 		B1B4F3BB193FAC2900B6B869 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B4F3BA193FAC2900B6B869 /* AppDelegate.swift */; };
 		B1B4F3BD193FAC2900B6B869 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1B4F3BC193FAC2900B6B869 /* Images.xcassets */; };
@@ -25,6 +26,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		48CC680519A22EB10004DFE3 /* SwizzlingExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwizzlingExample-Bridging-Header.h"; sourceTree = "<group>"; };
+		48CC680C19A235C20004DFE3 /* Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Ext.m; path = SwizzlingExample/Ext.m; sourceTree = "<group>"; };
+		48CC680E19A235E70004DFE3 /* Ext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Ext.h; path = SwizzlingExample/Ext.h; sourceTree = "<group>"; };
 		B151271219406DB800CB4446 /* MyClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyClass.swift; sourceTree = "<group>"; };
 		B1B4F3B5193FAC2900B6B869 /* SwizzlingExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwizzlingExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1B4F3B9193FAC2900B6B869 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,6 +61,8 @@
 		B1B4F3AC193FAC2900B6B869 = {
 			isa = PBXGroup;
 			children = (
+				48CC680C19A235C20004DFE3 /* Ext.m */,
+				48CC680E19A235E70004DFE3 /* Ext.h */,
 				B1B4F3B7193FAC2900B6B869 /* SwizzlingExample */,
 				B1B4F3C5193FAC2900B6B869 /* SwizzlingExampleTests */,
 				B1B4F3B6193FAC2900B6B869 /* Products */,
@@ -80,6 +86,7 @@
 				B151271219406DB800CB4446 /* MyClass.swift */,
 				B1B4F3BC193FAC2900B6B869 /* Images.xcassets */,
 				B1B4F3B8193FAC2900B6B869 /* Supporting Files */,
+				48CC680519A22EB10004DFE3 /* SwizzlingExample-Bridging-Header.h */,
 			);
 			path = SwizzlingExample;
 			sourceTree = "<group>";
@@ -207,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B151271319406DB800CB4446 /* MyClass.swift in Sources */,
+				48CC680D19A235C20004DFE3 /* Ext.m in Sources */,
 				B1B4F3BB193FAC2900B6B869 /* AppDelegate.swift in Sources */,
 				B1DC3C0A19408BD70022B938 /* MBSwizzler.swift in Sources */,
 			);
@@ -313,9 +321,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SwizzlingExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwizzlingExample/SwizzlingExample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -324,9 +335,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SwizzlingExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwizzlingExample/SwizzlingExample-Bridging-Header.h";
 			};
 			name = Release;
 		};
