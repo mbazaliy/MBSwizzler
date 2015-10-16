@@ -10,33 +10,34 @@ import Foundation
 
 extension NSObject {
     
-    class func swizzleMethodSelector(origSelector: CString!, withSelector: CString!, forClass:AnyClass!) -> Bool {
-        
-        var originalMethod: Method?
-        var swizzledMethod: Method?
-        
-        originalMethod = class_getInstanceMethod(forClass, Selector.convertFromStringLiteral(origSelector))
-        swizzledMethod = class_getInstanceMethod(forClass, Selector.convertFromStringLiteral(withSelector))
-        
-        if (originalMethod && swizzledMethod) {
-            method_exchangeImplementations(originalMethod!, swizzledMethod!)
-            return true
+    public class func swizzleClassMethods(originalSelector:Selector , swizzledSelector:Selector){
+
+        if let c: AnyClass = object_getClass(self) {
+            let originalMethod = class_getClassMethod(c, originalSelector)
+            let swizzledMethod = class_getClassMethod(c, swizzledSelector)
+
+            let didAddMethod = class_addMethod(c, originalSelector, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod))
+
+            if didAddMethod {
+                class_replaceMethod(c, swizzledSelector, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod))
+            } else {
+                method_exchangeImplementations(originalMethod, swizzledMethod);
+            }
         }
-        return false
     }
-    
-    class func swizzleStaticMethodSelector(origSelector: CString!, withSelector: CString!, forClass:AnyClass!) -> Bool {
-        
-        var originalMethod: Method?
-        var swizzledMethod: Method?
-        
-        originalMethod = class_getClassMethod(forClass, Selector.convertFromStringLiteral(origSelector))
-        swizzledMethod = class_getClassMethod(forClass, Selector.convertFromStringLiteral(withSelector))
-        
-        if (originalMethod && swizzledMethod) {
-            method_exchangeImplementations(originalMethod!, swizzledMethod!)
-            return true
+
+    public class func swizzleInstanceMethods(originalSelector:Selector , swizzledSelector:Selector){
+
+        let originalMethod = class_getInstanceMethod(self, originalSelector)
+        let swizzledMethod = class_getInstanceMethod(self, swizzledSelector)
+
+        let didAddMethod = class_addMethod(self, originalSelector, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod))
+
+        if didAddMethod {
+            class_replaceMethod(self, swizzledSelector, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod))
+        } else {
+            method_exchangeImplementations(originalMethod, swizzledMethod);
         }
-        return false
+        
     }
 }
